@@ -2,6 +2,8 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
+
+# Ignore Unity generated folders both at root and inside subfolder
 .utmp/
 /[Ll]ibrary/
 /[Tt]emp/
@@ -11,6 +13,17 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 *.log
+
+# Subfolder (StuntCarRacerMENU) specific ignores
+StuntCarRacerMENU/Library/
+StuntCarRacerMENU/Temp/
+StuntCarRacerMENU/Obj/
+StuntCarRacerMENU/Build/
+StuntCarRacerMENU/Builds/
+StuntCarRacerMENU/Logs/
+StuntCarRacerMENU/UserSettings/
+StuntCarRacerMENU/MemoryCaptures/
+StuntCarRacerMENU/Recordings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
