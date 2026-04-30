@@ -7,16 +7,24 @@ public class Timer : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI timerDisplay;
 
+    [SerializeField]  float currentTime = 0f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        currentTime = 0f;                       // Sets timer to 0
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        DisplayTimer(currentTime);              // Updates timer every frame
     }
+
+    private void DisplayTimer(float time)       // Takes the current time, adds Time.deltaTime, incase of in the future, the current time of a lap is to be saved.
+    {
+    currentTime = time + Time.deltaTime;
+
+        timerDisplay.text = $"Time: {currentTime.ToString("F2")}";
+    }
+
+    // FUTURE: Toggle Timer
 }
