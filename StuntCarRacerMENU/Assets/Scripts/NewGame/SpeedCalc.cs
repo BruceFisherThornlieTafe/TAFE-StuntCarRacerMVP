@@ -22,8 +22,8 @@ public class SpeedCalc : MonoBehaviour
 
     void DisplayText()
     {
-        //sets the speed display text to the velocity magnitude in unity measurements (meters) *3.6 to be KM/h, converted to a short string
-        speedDisplay.text = (carBody.linearVelocity.magnitude*3.6).ToShortString();
+        //sets the speed display text to the velocity magnitude in unity measurements (meters) *3.6 to be KM/h, converted to a short string with no decimals
+        speedDisplay.text = (carBody.linearVelocity.magnitude * 3.6f).ToString("F0");
         
         
     }
