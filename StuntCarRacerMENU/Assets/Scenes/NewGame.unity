@@ -2347,6 +2347,7 @@ GameObject:
   - component: {fileID: 1014139886}
   - component: {fileID: 1014139885}
   - component: {fileID: 1014139884}
+  - component: {fileID: 1014139887}
   - component: {fileID: 1014139883}
   m_Layer: 0
   m_Name: Cube (1)
@@ -2370,7 +2371,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2448,6 +2449,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1014139887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014139882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37237f2af88877743a8d948e2fb64d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LapInteraction
+  LapDisplay: {fileID: 1137961316}
+  lapInteract: {fileID: 1014139882}
+  lapText: {fileID: 1137961316}
+  Score: 0
+  maxLap: 3
 --- !u!1001 &1049597131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5178,7 +5196,7 @@ GameObject:
   - component: {fileID: 2098003660}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
