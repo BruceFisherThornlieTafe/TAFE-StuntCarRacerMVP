@@ -967,6 +967,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 279972072}
+  - component: {fileID: 279972073}
   m_Layer: 5
   m_Name: Laps Container
   m_TagString: Untagged
@@ -995,6 +996,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &279972073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279972071}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22349644c8de2ea4595f0ed6f0dec13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LapUI
+  LapDisplay: {fileID: 1137961316}
+  lapInteract: {fileID: 2098003652}
+  lapText: {fileID: 1137961316}
+  Score: 0
+  maxLap: 3
+  Lap3WinUI: {fileID: 1298778835}
 --- !u!1 &360765812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2533,7 +2552,7 @@ GameObject:
   - component: {fileID: 1137961317}
   - component: {fileID: 1137961316}
   m_Layer: 5
-  m_Name: LapText (Legacy)
+  m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3040,6 +3059,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4184251180472908069, guid: 457ee3cfb7d930846b1e25a22880f3ef, type: 3}
+      propertyPath: m_TagString
+      value: lapInteract
+      objectReference: {fileID: 0}
     - target: {fileID: 7065711873786430056, guid: 457ee3cfb7d930846b1e25a22880f3ef, type: 3}
       propertyPath: m_Name
       value: LapGoal (2)
@@ -5090,8 +5113,8 @@ GameObject:
   - component: {fileID: 2098003655}
   - component: {fileID: 2098003654}
   - component: {fileID: 2098003653}
-  - component: {fileID: 2098003660}
   - component: {fileID: 2098003661}
+  - component: {fileID: 2098003660}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5517,6 +5540,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2795972727017842580, guid: 457ee3cfb7d930846b1e25a22880f3ef, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7065711873786430056, guid: 457ee3cfb7d930846b1e25a22880f3ef, type: 3}
       propertyPath: m_Name
       value: LapGoal

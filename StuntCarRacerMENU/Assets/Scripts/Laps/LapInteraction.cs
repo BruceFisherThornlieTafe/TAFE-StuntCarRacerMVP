@@ -1,17 +1,19 @@
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class LapInteraction : MonoBehaviour
 {
-    [SerializeField] Text LapDisplay;
+    //[SerializeField] Text LapDisplay;
 
-    private int remainingLaps = 0;
+    //private int remainingLaps = 0;
 
-    public GameObject lapInteract;
-    public Text lapText;
-    public int Score;
-    public int maxLap = 3;
-    public 
+    //public GameObject lapInteract;
+    //public Text lapText;
+    //public int Score;
+    //public int maxLap = 3;
+    //public GameObject Lap3WinUI;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,11 +31,28 @@ public class LapInteraction : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Score++;
-            remainingLaps += 1;
-            LapDisplay.text = $"Lap: {remainingLaps} / 3";
+            EventBus.LapIncrease();
+            
+            //remainingLaps += 1;
+
+            //if (remainingLaps <= maxLap)
+            //{
+            //    Score++;
+            //    LapDisplay.text = $"Lap: {remainingLaps} / {maxLap}";
+            //}
+            //else 
+            //{
+            //    Lap3WinUI.SetActive(true);
+            //    Debug.Log("I win");
+            //}
         }
+        
+        //if (maxLap >= 3)
+        //{
+
+        //}
     }
+
 
     // Source:
     // https://www.youtube.com/watch?v=lBMqlLcQmuE
