@@ -965,7 +965,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0a0bbb7b687a584eb33fc23a12b1aa4, type: 3}
---- !u!1 &279972071
 --- !u!1 &251738710
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,12 +974,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 279972072}
-  m_Layer: 5
-  m_Name: Laps Container
-  - component: {fileID: 251738711}
   - component: {fileID: 251738714}
-  - component: {fileID: 251738713}
   - component: {fileID: 251738712}
+  - component: {fileID: 251738713}
   m_Layer: 5
   m_Name: TimerUI
   m_TagString: Untagged
@@ -988,7 +984,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &279972072
 --- !u!224 &251738711
 RectTransform:
   m_ObjectHideFlags: 0
@@ -996,7 +991,6 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279972071}
-  m_GameObject: {fileID: 251738710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1011,14 +1005,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
-  - {fileID: 276808052}
-  m_Father: {fileID: 84277616}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 20, y: -20}
-  m_SizeDelta: {x: 420, y: 80}
-  m_Pivot: {x: 0, y: 1}
 --- !u!114 &251738712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1096,12 +1082,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276808051}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 251738711}
+  m_Father: {fileID: 279972072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1208,6 +1194,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276808051}
   m_CullTransparentMesh: 1
+--- !u!1 &279972071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 251738711}
+  m_Layer: 0
+  m_Name: Laps Container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &279972072
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251738710}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 276808052}
+  m_Father: {fileID: 84277616}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -14, y: -64}
+  m_SizeDelta: {x: 420, y: 80}
+  m_Pivot: {x: 1, y: 1}
 --- !u!1 &360765812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,7 +2923,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 279972072}
+  m_Father: {fileID: 251738711}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3977,7 +3999,7 @@ RectTransform:
   m_LocalScale: {x: 14.723126, y: 13.978243, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 279972072}
+  m_Father: {fileID: 251738711}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5626,11 +5648,6 @@ MonoBehaviour:
   Score: 0
   maxLap: 3
   Lap3WinUI: {fileID: 1298778835}
-  m_Script: {fileID: 11500000, guid: fe04867473e61f74e8343bb21fd70b7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpeedCalc
-  carBody: {fileID: 2098003654}
-  speedDisplay: {fileID: 830607451}
 --- !u!1 &2122436195
 GameObject:
   m_ObjectHideFlags: 0
