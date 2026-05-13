@@ -2030,6 +2030,7 @@ GameObject:
   - component: {fileID: 830607450}
   - component: {fileID: 830607452}
   - component: {fileID: 830607451}
+  - component: {fileID: 830607453}
   m_Layer: 5
   m_Name: SpeedoText
   m_TagString: Untagged
@@ -2156,6 +2157,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830607449}
   m_CullTransparentMesh: 1
+--- !u!114 &830607453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830607449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe04867473e61f74e8343bb21fd70b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpeedCalc
+  carBody: {fileID: 2098003654}
+  speedDisplay: {fileID: 830607451}
 --- !u!1 &921155998
 GameObject:
   m_ObjectHideFlags: 0
