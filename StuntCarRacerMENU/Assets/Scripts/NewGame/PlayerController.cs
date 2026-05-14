@@ -378,6 +378,8 @@ public class PlayerController : MonoBehaviour
     // Collision Handling
     // -------------------------------------------------------
     // Added Collisions here as BASIC controller
+   
+    /* Disabed to avoid collision with barrels
     private void OnCollisionEnter(Collision collision)
     {
         // When car hits something set speed to 0
@@ -387,6 +389,7 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
     }
+    */
 
     // Checks if boost pad is still on, if so it stops the current boost pad then it starts it again so the timer runs fully
 
