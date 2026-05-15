@@ -52,4 +52,11 @@ public static class EventBus
     //   3. Enable the Load and Delete button and store the chosen name
     public static void SaveFileSelected(string saveFileName) => OnSaveFileSelected?.Invoke(saveFileName);
     public static event Action<string> OnSaveFileSelected;
+
+    // -------------------------------------------------------
+    // Update Lap
+    // -------------------------------------------------------
+
+    public static void LapIncrease() => OnLapIncrease?.Invoke();
+    public static event Action OnLapIncrease;
 }

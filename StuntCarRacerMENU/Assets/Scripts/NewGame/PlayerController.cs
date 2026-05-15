@@ -77,6 +77,7 @@
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
@@ -112,6 +113,10 @@ public class PlayerController : MonoBehaviour
     // Tracks the current engine/brakes sound state
     private enum SoundState { Idle, Running, Turbo, Braking }
     private SoundState soundState = SoundState.Idle;
+
+    // Boost pad stuff
+    private bool boostPadActive = false;
+    private Coroutine boostPadCoroutine;
 
     // -------------------------------------------------------
     // Unity Lifecycle
@@ -175,7 +180,7 @@ public class PlayerController : MonoBehaviour
         // Read Input
         Vector2 input = moveAction.action.ReadValue<Vector2>();
         bool braking = brakeAction.action.IsPressed();
-        bool turbo = turboAction.action.IsPressed();
+        bool turbo = turboAction.action.IsPressed() || boostPadActive;
 
         // Dead zone on the forward/back axis to avoid drift from near zero stick input
         // I could just use "bool hasInput = input.y != 0f;" as keyboard only
@@ -373,6 +378,8 @@ public class PlayerController : MonoBehaviour
     // Collision Handling
     // -------------------------------------------------------
     // Added Collisions here as BASIC controller
+   
+    /* Disabed to avoid collision with barrels
     private void OnCollisionEnter(Collision collision)
     {
         // When car hits something set speed to 0
@@ -381,6 +388,28 @@ public class PlayerController : MonoBehaviour
         // Kill any leftover momentum to prevent jittering against any walls or objects
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
+    }
+    */
+
+    // Checks if boost pad is still on, if so it stops the current boost pad then it starts it again so the timer runs fully
+
+    public void TriggerBoostPad(float duration)
+    {
+        if (boostPadCoroutine != null)
+        {
+            StopCoroutine(boostPadCoroutine);
+        }
+
+        boostPadCoroutine = StartCoroutine(BoostPadTimer(duration));
+    }
+
+    // Timer for the boost pad, activates by setting the boost to true then is told to wait for the duration to finish then sets boost to false
+    private IEnumerator BoostPadTimer(float duration)
+    {
+        boostPadActive = true;
+        yield return new WaitForSeconds(duration);
+        boostPadActive = false;
+        boostPadCoroutine = null;
     }
 
 }
