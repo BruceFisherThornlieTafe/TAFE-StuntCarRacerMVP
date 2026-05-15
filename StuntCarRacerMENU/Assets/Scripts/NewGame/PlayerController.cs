@@ -103,6 +103,9 @@ public class PlayerController : MonoBehaviour
     [Header("<mark=#00008BFF>Braking")]
     public float brakeDecelerate = 100f;    // Deceleration rate while brake is held
 
+    [Header("<mark=#00008BFF>Boost UI")]
+    public GameObject boostActivatedUI;     // Boost pad activation UI in the inspector
+
     // -------------------------------------------------------
     // Private State
     // -------------------------------------------------------
@@ -404,9 +407,11 @@ public class PlayerController : MonoBehaviour
     private IEnumerator BoostPadTimer(float duration)
     {
         boostPadActive = true;
+        boostActivatedUI.SetActive(true); // Activates the UI element when the boost pad is active
         yield return new WaitForSeconds(duration);
         boostPadActive = false;
         boostPadCoroutine = null;
+        boostActivatedUI.SetActive(false); // Deactivates the UI element once boost pad period ends
     }
 
 }
